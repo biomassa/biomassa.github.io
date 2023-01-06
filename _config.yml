@@ -21,9 +21,8 @@
 title: zvoovim micronetlabel
 email: dingus@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  a micro netlabel out of Tel Aviv, Israel.
+  a micro netlabel out of tel aviv, israel.
   we welcome everyone.
-  we stand with Ukraine.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jumbofume
