@@ -22,14 +22,14 @@ title: זבובים / zvoovim
 author: black dingus
 email: dingus@nyms.love
 description: >- # this means to ignore newlines until "baseurl:"
-  זבובים — a noise / experimental micro netlabel out of tel aviv, israel.
+  a noise / experimental music micro netlabel out of tel aviv, israel.
   we welcome everyone.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jumbofume
-github_username:  biomassa
+#github_username:  biomassa
 rss: rss
-# facebook_username: arstroitski
+facebook_username: arstroitski
 # Build settings
 theme: minima
 # remote-theme: pages-themes/minimal@v0.2.0
