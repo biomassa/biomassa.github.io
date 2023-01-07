@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  politics and music
+title:  political statements
 date:   2023-01-07 21:10:56 +0200
 categories: general
 ---
