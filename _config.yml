@@ -44,6 +44,7 @@ header_pages:
   - _pages/frontpage.md
   - _pages/releases.md
   - _pages/people.md
+  - _pages/links.md
 include:
     - _pages
 exclude: 
