@@ -6,6 +6,6 @@ categories: releases
 ---
 oh hai. just experimenting.
 
-check out [our bandcamp][zvoovim-bc]
+check out [our bandcamp][zvoovim-bc].
 
 [zvoovim-bc]: https://zvoovim.bandcamp.com/
