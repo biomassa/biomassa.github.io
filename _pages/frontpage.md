@@ -1,10 +1,14 @@
 ---
 permalink: /
 layout: home
-title: welcome
+title: updates
 list_title: updates
 ---
 
-<br>knock knock. this is an ultraminimalist, semi-private self release space maintained by [black dingus][people].
+<br>shalom! this is an ultraminimalist noise / experimental no-label maintained by [black dingus][people].<br>
+check out our releases [here] and on [bandcamp].<br>
+if you want your album here drop us an email (address below).
 
 [people]: /people
+[here]: /releases
+[bandcamp]: https://zvoovim.bandcamp.com/
