@@ -4,7 +4,7 @@ title: links
 permalink: /links/
 ---
 ### other labels
-[p.o.](https://pomusic.bandcamp.com/) — released [black dingus](/people) and a few collabs of his   
+[p.o.](https://pomusic.bandcamp.com/){:target="_blank"} — released [black dingus](/people) and a few collabs of his
 [elysian music](https://elysiantunes.bandcamp.com/){:target="_blank"} — astro the fox   
 <br>
 ### projects / communities
