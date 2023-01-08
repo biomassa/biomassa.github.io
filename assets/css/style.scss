@@ -1,0 +1,14 @@
+--- # Only the main Sass file needs front matter (the dashes are enough) --- @import "{{ site.theme }}";
+
+.site-header {
+	border: none;
+}
+
+.site-footer {
+	border: none;
+}
+
+body {
+	overflow: scroll;
+	/* always-on scrollbars so menu won't jump*/
+}
