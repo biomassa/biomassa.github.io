@@ -8,9 +8,6 @@ list_title: updates
 <br>shalom! this is an ultraminimalist noise / experimental no-label maintained by [black dingus][people].<br>
 check out our releases [here] and on [bandcamp]{:target="_blank"}.
 
-if you want your album here drop us an email (address below).   
-<br>
-
 [people]: /people
 [here]: /releases
 [bandcamp]: https://zvoovim.bandcamp.com/
