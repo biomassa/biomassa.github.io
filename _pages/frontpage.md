@@ -5,7 +5,7 @@ title: updates
 list_title: updates
 ---
 
-<br>shalom! this is an ultraminimalist noise / experimental no-label maintained by [black dingus][people].<br>
+<br>an off-the-grid micronetlabel / microblog. just [black dingus][people] for now but you are welcome too.<br>
 check out our releases [here] and on [bandcamp]{:target="_blank"}.
 
 [people]: /people
