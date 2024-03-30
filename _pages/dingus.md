@@ -3,11 +3,9 @@ layout: page
 title: black dingus
 permalink: /dingus/
 ---
-### arseni troitski
-
 ![photo by Scooter McCrae](/assets/img/ars.jpg)<br>_photo by scooter mccrae, brooklyn, ny_
 
-arseni releases music as himself (in collaborations) or as *black dingus* (solo).   
+arseni troitski releases music as himself (in collaborations) or as *black dingus* (solo).   
 his instruments are modular synthesizers, field recorders, tape machines and software.
 
 arseni is one half of the transoceanic networked duo [manifestoon platoon](https://manifestoon.org/){:target="_blank"} (with brooklyn-based ethnomusicologist and musician [eliot bates](https://eliotbates.com){:target="_blank"}).    
