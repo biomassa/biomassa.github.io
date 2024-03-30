@@ -5,9 +5,8 @@ title: updates
 list_title: updates
 ---
 
-<br>an off-the-grid micronetlabel / microblog. just [black dingus][people] for now but you are welcome too.<br>
+<br>an off-the-grid private self-release netlabel / microblog. <br>
 check out our releases [here] and on [bandcamp]{:target="_blank"}.
 
-[people]: /people
 [here]: /releases
 [bandcamp]: https://zvoovim.bandcamp.com/

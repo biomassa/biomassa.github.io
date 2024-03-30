@@ -1,7 +1,7 @@
 ---
 layout: page
-title: people
-permalink: /people/
+title: black dingus
+permalink: /dingus/
 ---
 ### arseni troitski
 
