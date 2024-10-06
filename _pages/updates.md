@@ -1,7 +1,7 @@
 ---
 permalink: /updates/
 layout: home
-title: "/updates"
+title: "updates"
 list_title: updates
 ---
 

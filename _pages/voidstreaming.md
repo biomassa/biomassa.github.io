@@ -1,9 +1,10 @@
 ---
-layout: page
-title: "/voidstreaming series"
+layout: headlesspage
+title: "voidstreaming series"
+list-title: voidstreaming series
 permalink: /voidstreaming/
 ---
-
+# voidstreaming
 
 ![](/assets/img/vs.jpg)<br>
 

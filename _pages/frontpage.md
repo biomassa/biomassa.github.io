@@ -1,7 +1,7 @@
 ---
 permalink: /
 list_title: "black dingus"
-title: "/"
+title: "<–"
 layout: headlesspage
 ---
 ![photo by Scooter McCrae](/assets/img/ars.jpg)<br>_photo by scooter mccrae, brooklyn, ny_
