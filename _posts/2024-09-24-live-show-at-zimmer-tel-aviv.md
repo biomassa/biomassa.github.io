@@ -12,6 +12,4 @@ Amos Troitski – modular synth<br>
 Rony Sheffer – drums<br><br>
 
 <iframe width="800" height="480" src="https://www.youtube.com/embed/sCWhJwXmT-A?si=-tmrvn0NPHpzLXaV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-
 (apologies for a/v quality, this is a smartphone recording in a dark venue)
