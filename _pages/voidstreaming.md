@@ -1,6 +1,6 @@
 ---
 layout: page
-title: voidstreaming series
+title: "/voidstreaming series"
 permalink: /voidstreaming/
 ---
 

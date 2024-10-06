@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}. 
 
-title: זבובים / zvoovim
+title: black dingus
 author: contact —
 email: dingus@nyms.love
 description: >- # this means to ignore newlines until "baseurl:"
@@ -41,9 +41,9 @@ minima:
 # Minima: custom header links
 header_pages:
   - _pages/frontpage.md
-  - _pages/releases.md
+  - _pages/updates.md
   - _pages/voidstreaming.md
-  - _pages/dingus.md
+  - _pages/releases.md
 include:
     - _pages
 exclude: 
