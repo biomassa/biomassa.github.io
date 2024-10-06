@@ -44,7 +44,6 @@ header_pages:
   - _pages/releases.md
   - _pages/voidstreaming.md
   - _pages/dingus.md
-  - _pages/links.md
 include:
     - _pages
 exclude: 
