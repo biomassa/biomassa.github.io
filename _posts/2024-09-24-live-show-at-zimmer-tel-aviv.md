@@ -1,6 +1,6 @@
 ---
 layout: post
-title: live show at zimmer tel aviv 
+title: live show at zimmer tel aviv (quartet)
 date: 2024-09-24 23:33:56 +0200
 categories: musics
 ---
