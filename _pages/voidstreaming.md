@@ -7,7 +7,7 @@ permalink: /voidstreaming/
 
 ![](/assets/img/vs.jpg)<br>
 
-unprepared, accidental and entirely unannounced streams from my home studio in central israel.<br>conceived as practice sessions — turns out, having a camera on helps train for live performance situations, even if no one is watching. no editing or processing whatsoever.<br><br>
+low key, unprepared, accidental and entirely unannounced streams from my home studio in central israel.<br>conceived as practice sessions — turns out, having a camera on helps train for live performance situations, even if no one is watching. no editing or processing whatsoever.<br><br>
 this is an ongoing "release", descending chronological order (most recent ones going first).
 
 <br>
