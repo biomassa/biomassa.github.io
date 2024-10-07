@@ -34,9 +34,13 @@ theme: minima
 # remote-theme: pages-themes/minimal@v0.2.0
 plugins:
   - jekyll-feed
+#  - jekyll-remote-theme
   # Minima: show excerpts in the frontpage
+#
+# remote_theme: pages-themes/minima
 show_excerpts: false
 minima:
+  skin: dark
   date_format: "%Y-%m-%d"
 # Minima: custom header links
 header_pages:
