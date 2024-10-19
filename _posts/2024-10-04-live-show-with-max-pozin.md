@@ -1,7 +1,7 @@
 ---
 layout: post
 title: live show at zimmer tel aviv (duo with max pozin)
-date: 2024-09-24 23:33:56 +0200
+date: 2024-10-04 23:33:56 +0200
 categories: musics
 ---
 
