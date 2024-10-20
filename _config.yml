@@ -45,7 +45,7 @@ minima:
 # Minima: custom header links
 header_pages:
   - _pages/frontpage.md
-  - _pages/updates.md
+  - _pages/about.md
   - _pages/voidstreaming.md
   - _pages/releases.md
 include:
