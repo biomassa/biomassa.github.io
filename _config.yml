@@ -22,7 +22,7 @@ title: black dingus
 author: contact —
 email: dingus@nyms.love
 description: >- # this means to ignore newlines until "baseurl:"
-  a self release micronetlabel out of tel aviv
+  somewhere around tel aviv
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jumbofume
@@ -45,9 +45,10 @@ minima:
 # Minima: custom header links
 header_pages:
   - _pages/frontpage.md
-  - _pages/about.md
-  - _pages/voidstreaming.md
   - _pages/releases.md
+  - _pages/voidstreaming.md
+  - _pages/about.md
+
 include:
     - _pages
 exclude: 
