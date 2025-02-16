@@ -11,6 +11,7 @@ low key, unprepared, accidental and entirely unannounced streams from my home st
 this is an ongoing "release", descending chronological order (most recent ones going first).
 
 <br>
+<iframe width="800" height="480" src="https://www.youtube.com/embed/fxB7BUUgNnE?si=1AleGyqsnxEJGfCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <iframe width="800" height="480" src="https://www.youtube.com/embed/3aYBxMTOdEI?si=2somRA5xFuUTUMva" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
 <iframe width="800" height="480" src="https://www.youtube.com/embed/Y0VNk7jO_TA?si=SZtiLnHBOUIShJFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
 <iframe width="800" height="480" src="https://www.youtube.com/embed/2CL7-ODkCWU?si=Hb_bl2x8c6oFycos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
