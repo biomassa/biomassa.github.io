@@ -1,9 +1,9 @@
 ---
 permalink: /
 layout: home
-title: "updates"
-list_title: updates
+title: "stuff"
+list_title: stuff
 ---
 
-# updates
+# stuff
 
