@@ -5,5 +5,3 @@ title: "stuff"
 list_title: stuff
 ---
 
-# stuff
-

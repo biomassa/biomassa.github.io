@@ -16,7 +16,7 @@
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}. 
+# in the templates via {{ site.myvariable }}.
 
 title: black dingus
 author: contact —
@@ -35,7 +35,7 @@ theme: minima
 plugins:
   - jekyll-feed
 #  - jekyll-remote-theme
-  # Minima: show excerpts in the frontpage
+# Minima: show excerpts in the frontpage
 #
 # remote_theme: pages-themes/minima
 show_excerpts: false
@@ -48,16 +48,17 @@ header_pages:
   - _pages/releases.md
   - _pages/voidstreaming.md
   - _pages/about.md
+  - _pages/testarea.md
 
 include:
-    - _pages
-exclude: 
-    - .gitignore
-    - docker-compose.yml
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-    - README.md       
+  - _pages
+exclude:
+  - .gitignore
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
