@@ -5,11 +5,10 @@ list-title: voidstreaming series
 permalink: /voidstreaming/
 ---
 
-![](/assets/img/vs.jpg)<br>
-
-low key, unprepared, accidental and entirely unannounced streams from my home studio.<br>conceived as practice sessions — turns out, having a camera on helps train for live performance situations, even if no one is watching. no editing or processing whatsoever.<br><br>
+<img src="../assets/img/vs.jpg"><br>
+# voidstreaming
+low key, unprepared, accidental streams from my home studio.<br>conceived as practice sessions — turns out, having a camera on helps train for live performance situations, even if no one is watching. no editing or processing whatsoever.<br><br>
 this is an ongoing "release", descending chronological order (most recent ones going first).
-
 <br>
 <iframe width="800" height="480" src="https://www.youtube.com/embed/-ZkRjQyfpNo?si=dAcTAtR8gfJXO-lD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <iframe width="800" height="480" src="https://www.youtube.com/embed/fxB7BUUgNnE?si=1AleGyqsnxEJGfCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
