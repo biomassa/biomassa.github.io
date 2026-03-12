@@ -48,7 +48,7 @@ header_pages:
   - _pages/releases.md
   - _pages/voidstreaming.md
   - _pages/about.md
-  - _pages/testarea.md
+  - _pages/accidental.md
 
 include:
   - _pages

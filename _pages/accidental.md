@@ -1,7 +1,7 @@
 ---
-permalink: /testarea/
-list_title: "testarea"
-title: "testarea"
+permalink: /accidental/
+list_title: "accidental"
+title: "accidental"
 layout: page
 ---
 
@@ -25,7 +25,7 @@ layout: page
   .mixer-controls {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
     margin-top: 50px;
     max-width: 600px;
     margin-left: auto;
@@ -59,9 +59,9 @@ layout: page
   input[type=range]:focus {
     outline: none;
   }
-  #start-mix-btn {
+  .mix-btn {
     display: block;
-    margin: 40px auto;
+    margin: 30px auto;
     padding: 10px 20px;
     font-size: 1em;
     background: black;
@@ -70,14 +70,15 @@ layout: page
     cursor: pointer;
     font-family: inherit;
     text-transform: lowercase;
+    text-decoration: none;
   }
-  #start-mix-btn:hover {
+  .mix-btn:hover {
     background: white;
     color: black;
   }
 </style>
 
-<button id="start-mix-btn">initialize</button>
+<button id="start-mix-btn" class="mix-btn">initialize</button>
 
 <div class="mixer-controls" id="mixer-container">
   {% for file in site.static_files %}
@@ -96,5 +97,7 @@ layout: page
     {% endif %}
   {% endfor %}
 </div>
+
+<div style="text-align:center;"><a href="{{ '/' | relative_url }}" class="mix-btn" style="display:inline-block;color:white;">back</a></div>
 
 <script src="{{ '/assets/js/looper.js' | relative_url }}"></script>
