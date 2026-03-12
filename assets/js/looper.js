@@ -1,122 +1,131 @@
 document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('start-mix-btn');
+  const container = document.getElementById('mixer-container');
+  
+  // randomize track order in dom
+  const trackControls = Array.from(container.children);
+  for (let i = trackControls.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [trackControls[i], trackControls[j]] = [trackControls[j], trackControls[i]];
+  }
+  trackControls.forEach(ctrl => container.appendChild(ctrl));
+
   const sliders = document.querySelectorAll('.volume-slider');
   
   let audioCtx;
-  const tracks = [];
+  let tracks = [];
   let isPlaying = false;
+  let isLoaded = false;
 
-  // Convert dB to linear amplitude (gain)
-  // Gain = 10 ^ (dB / 20)
-  // If dB is -60 or lower, consider it 0 (silence)
   function dbToGain(db) {
     if (db <= -60) return 0;
     return Math.pow(10, db / 20);
   }
 
-  // Update dB readout next to slider
-  function updateReadout(slider) {
-    const readout = slider.nextElementSibling;
-    if (slider.value <= -60) {
-      readout.textContent = '-Inf dB';
-    } else {
-      // Add '+' sign for positive values
-      const val = parseFloat(slider.value);
-      readout.textContent = (val > 0 ? '+' : '') + val.toFixed(1) + ' dB';
-    }
-  }
-
-  // Fetch and decode an audio file
   async function loadTrack(ctx, url) {
     const response = await fetch(url);
     const arrayBuffer = await response.arrayBuffer();
-    const audioBuffer = await ctx.decodeAudioData(arrayBuffer);
-    return audioBuffer;
+    return await ctx.decodeAudioData(arrayBuffer);
   }
 
-  async function initAudio() {
+  async function initAndPlay() {
     startBtn.disabled = true;
-    startBtn.textContent = 'Initializing...';
+    startBtn.textContent = 'loading...';
     
-    // Create AudioContext
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
     
     try {
-      // Step 1: Gather URLs and map to loading promises
-      const loadPromises = Array.from(sliders).map(async (slider, index) => {
-        const url = slider.dataset.trackUrl;
-        startBtn.textContent = `Loading track ${index + 1}/${sliders.length}...`;
-        
-        const buffer = await loadTrack(audioCtx, url);
-        
-        // Create nodes
-        const source = audioCtx.createBufferSource();
-        const gainNode = audioCtx.createGain();
-        
-        source.buffer = buffer;
-        source.loop = true;
-        
-        // Initial gain is whatever the slider is at
-        const initialDb = parseFloat(slider.value);
-        gainNode.gain.value = dbToGain(initialDb);
-        
-        // Connect nodes
-        source.connect(gainNode);
-        gainNode.connect(audioCtx.destination);
-        
-        // Handle UI interaction
-        slider.addEventListener('input', (e) => {
-          const db = parseFloat(e.target.value);
-          // Optional: use exponentialRampToValueAtTime for smooth volume changes to avoid clicks
-          // But direct assignment is fine for quick adjustments
-          const newGain = dbToGain(db);
-          // Smoothing (10ms)
-          gainNode.gain.setTargetAtTime(newGain, audioCtx.currentTime, 0.01);
-          updateReadout(slider);
+      if (!isLoaded) {
+        const loadPromises = Array.from(sliders).map(async (slider) => {
+          const url = slider.dataset.trackUrl;
+          const buffer = await loadTrack(audioCtx, url);
+          const gainNode = audioCtx.createGain();
+          
+          gainNode.gain.value = 0;
+          gainNode.connect(audioCtx.destination);
+          
+          slider.addEventListener('input', (e) => {
+            const db = parseFloat(e.target.value);
+            const newGain = dbToGain(db);
+            gainNode.gain.setTargetAtTime(newGain, audioCtx.currentTime, 0.01);
+          });
+          
+          return { buffer, gainNode, slider };
         });
 
-        // Initialize readout
-        updateReadout(slider);
-        
-        return { source, gainNode, slider };
+        tracks = await Promise.all(loadPromises);
+        isLoaded = true;
+      }
+      
+      // reset all sliders and gains
+      sliders.forEach(s => s.value = -60);
+      tracks.forEach(t => t.gainNode.gain.value = 0);
+      
+      // pick 3 random tracks
+      const randomIndices = [];
+      while(randomIndices.length < 3 && randomIndices.length < tracks.length) {
+        const r = Math.floor(Math.random() * tracks.length);
+        if(!randomIndices.includes(r)) randomIndices.push(r);
+      }
+      
+      // set random volumes between -10 and -3
+      randomIndices.forEach(idx => {
+        const randomDb = -10 + Math.random() * 7;
+        tracks[idx].slider.value = randomDb;
+        tracks[idx].gainNode.gain.value = dbToGain(randomDb);
       });
 
-      // Wait for all to download and decode
-      const loadedTracks = await Promise.all(loadPromises);
-      tracks.push(...loadedTracks);
-
-      // Enable UI
       sliders.forEach(s => s.disabled = false);
       
-      // If context was suspended (browser policy), resume it
       if (audioCtx.state === 'suspended') {
         audioCtx.resume();
       }
       
-      // Start all sources precisely at the same future time
       const startTime = audioCtx.currentTime + 0.1;
       tracks.forEach(track => {
-        track.source.start(startTime);
+        const source = audioCtx.createBufferSource();
+        source.buffer = track.buffer;
+        source.loop = true;
+        source.connect(track.gainNode);
+        source.start(startTime);
+        track.source = source; // store reference to stop it later
       });
       
       isPlaying = true;
-      startBtn.textContent = 'Playing (Seamless Loop)';
-      startBtn.style.background = '#2e8c4a'; // green-ish to indicate active
-      // Disable button so they don't click start again (can't call start() twice on BufferSource)
-      startBtn.disabled = true;
+      startBtn.textContent = 'playing. click to stop';
+      startBtn.disabled = false;
       
     } catch (err) {
-      console.error('Error loading audio:', err);
-      startBtn.textContent = 'Error loading audio';
+      console.error(err);
+      startBtn.textContent = 'error';
     }
   }
 
-  // Initial state logic
-  startBtn.textContent = 'Initialize';
+  function stopAudio() {
+    if (isPlaying) {
+      tracks.forEach(t => {
+        if (t.source) {
+          t.source.stop();
+          t.source.disconnect();
+        }
+      });
+      isPlaying = false;
+      startBtn.textContent = 'initialize';
+      sliders.forEach(s => {
+        s.disabled = true;
+        s.value = -60;
+      });
+    }
+  }
+
+  startBtn.textContent = 'initialize';
   startBtn.addEventListener('click', () => {
-    if (!audioCtx) {
-      initAudio();
+    if (isPlaying) {
+      stopAudio();
+    } else {
+      initAndPlay();
     }
   });
-
 });

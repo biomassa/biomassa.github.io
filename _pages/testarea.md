@@ -1,84 +1,95 @@
 ---
 permalink: /testarea/
-list_title: "testarea"
-title: "testarea"
 layout: page
 ---
 
 <style>
-  .mixer-controls {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+  body {
+    background-image: url('{{ "/assets/img/inaroom.jpg" | relative_url }}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
   }
-  .track-control {
+  .site-header, .site-footer {
+    display: none !important;
+  }
+  .page-content, .wrapper {
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  .mixer-controls {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: rgba(0,0,0,0.2);
-    padding: 15px;
-    border-radius: 8px;
+    gap: 20px;
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
   }
-  .track-control label {
-    margin-bottom: 10px;
-    font-size: 0.9em;
-    font-weight: bold;
-    text-align: center;
-    word-break: break-all;
+  .track-control {
+    width: 100%;
   }
-  /* Vertical slider styling */
-  input[type=range][orient=vertical] {
-    writing-mode: bt-lr; /* IE */
-    -webkit-appearance: slider-vertical; /* WebKit */
-    width: 20px;
-    height: 150px;
-    padding: 0 5px;
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    margin-top: -7px;
+    border: 1px solid black;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: black;
+  }
+  input[type=range]:focus {
+    outline: none;
   }
   #start-mix-btn {
     display: block;
-    margin: 20px auto;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    background: #444;
+    margin: 40px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    background: black;
     color: white;
-    border: none;
-    border-radius: 5px;
+    border: 1px solid white;
     cursor: pointer;
-    transition: background 0.2s;
+    font-family: inherit;
+    text-transform: lowercase;
   }
   #start-mix-btn:hover {
-    background: #666;
-  }
-  #start-mix-btn:disabled {
-    background: #333;
-    opacity: 0.5;
-    cursor: not-allowed;
+    background: white;
+    color: black;
   }
 </style>
 
-<h2>accidental-v1</h2>
-
-<button id="start-mix-btn">Initialize</button>
+<button id="start-mix-btn">initialize</button>
 
 <div class="mixer-controls" id="mixer-container">
   {% for file in site.static_files %}
     {% if file.extname == '.ogg' and file.path contains '/assets/audio/' %}
     <div class="track-control">
-      <label for="track-{{ forloop.index }}">{{ file.basename }}</label>
       <input 
         type="range" 
-        id="track-{{ forloop.index }}" 
         class="volume-slider" 
         data-track-url="{{ file.path | relative_url }}"
         min="-60" 
         max="6" 
         value="-60" 
         step="0.1"
-        orient="vertical"
-        disabled
       >
-      <span class="db-readout">-Inf dB</span>
     </div>
     {% endif %}
   {% endfor %}
