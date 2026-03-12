@@ -35,3 +35,5 @@ gem 'wdm', '~> 0.1.1', platforms: %i[mingw x64_mingw mswin]
 gem 'http_parser.rb', '~> 0.6.0', platforms: [:jruby]
 
 gem 'webrick', '~> 1.7'
+
+gem "ruby-lsp", "~> 0.26.8", :group => :development
