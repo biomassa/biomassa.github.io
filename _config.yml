@@ -47,8 +47,8 @@ header_pages:
   - _pages/frontpage.md
   - _pages/releases.md
   - _pages/voidstreaming.md
-  - _pages/about.md
   - _pages/accidental.md
+  - _pages/about.md
 
 include:
   - _pages
