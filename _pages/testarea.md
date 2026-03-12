@@ -57,10 +57,9 @@ layout: page
   }
 </style>
 
-<h2>Mix Area</h2>
-<p>Adjust the volume sliders below to create your own composition. All tracks are perfectly synced.</p>
+<h2>accidental-v1</h2>
 
-<button id="start-mix-btn">Loading audio...</button>
+<button id="start-mix-btn">Initialize</button>
 
 <div class="mixer-controls" id="mixer-container">
   {% for file in site.static_files %}

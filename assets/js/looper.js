@@ -88,30 +88,22 @@ document.addEventListener('DOMContentLoaded', () => {
       // Enable UI
       sliders.forEach(s => s.disabled = false);
       
-      startBtn.textContent = 'Play All Loops';
-      startBtn.disabled = false;
+      // If context was suspended (browser policy), resume it
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
       
-      // Start button logic
-      startBtn.addEventListener('click', () => {
-        if (!isPlaying) {
-          // If context was suspended (browser policy), resume it
-          if (audioCtx.state === 'suspended') {
-            audioCtx.resume();
-          }
-          
-          // Start all sources precisely at the same future time
-          const startTime = audioCtx.currentTime + 0.1;
-          tracks.forEach(track => {
-            track.source.start(startTime);
-          });
-          
-          isPlaying = true;
-          startBtn.textContent = 'Playing (Seamless Loop)';
-          startBtn.style.background = '#2e8c4a'; // green-ish to indicate active
-          // Disable button so they don't click start again (can't call start() twice on BufferSource)
-          startBtn.disabled = true;
-        }
+      // Start all sources precisely at the same future time
+      const startTime = audioCtx.currentTime + 0.1;
+      tracks.forEach(track => {
+        track.source.start(startTime);
       });
+      
+      isPlaying = true;
+      startBtn.textContent = 'Playing (Seamless Loop)';
+      startBtn.style.background = '#2e8c4a'; // green-ish to indicate active
+      // Disable button so they don't click start again (can't call start() twice on BufferSource)
+      startBtn.disabled = true;
       
     } catch (err) {
       console.error('Error loading audio:', err);
@@ -120,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initial state logic
-  startBtn.textContent = 'Load & Initialize Audio';
+  startBtn.textContent = 'Initialize';
   startBtn.addEventListener('click', () => {
     if (!audioCtx) {
       initAudio();
