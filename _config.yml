@@ -25,10 +25,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   somewhere around tel aviv
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jumbofume
-#github_username:  biomassa
+instagram_username: trashpanda93
 rss: rss
-facebook_username: arstroitski
 # Build settings
 plugins:
   - jekyll-feed

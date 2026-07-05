@@ -18,7 +18,7 @@ body {
 
 a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -54,6 +54,7 @@ a:hover {
 .page-link {
   margin-right: 16px;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .page-link:last-of-type {
@@ -66,26 +67,25 @@ a:hover {
   font-size: 12px;
 }
 
-.footer-heading {
-  font-size: 14px;
-  margin: 0 0 10px;
-}
-
-.footer-col-wrapper {
+.footer-inner {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
-}
-
-.footer-col {
-  flex: 1;
-  min-width: 200px;
 }
 
 .contact-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 4px;
+}
+
+.contact-list li + li::before {
+  content: " / ";
+  margin-right: 4px;
+  color: #888;
 }
 
 .social-media-list {
@@ -113,12 +113,20 @@ a:hover {
 }
 
 .post-list li {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+}
+
+.post-list li h3 {
+  margin: 0;
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 .post-meta {
   color: #888;
   font-size: 12px;
+  margin-right: 8px;
 }
 
 .post-link {
