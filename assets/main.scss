@@ -1,14 +1,199 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "{{ site.theme }}";
-
-.site-header {
-	border: none;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
-	overflow: scroll;
-	/* always-on scrollbars so menu won't jump*/
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: "Courier New", Courier, "Liberation Mono", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-y: scroll;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-content {
+  padding: 30px 0;
+}
+
+.site-header {
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+.site-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 24px;
+  text-transform: lowercase;
+}
+
+.site-nav {
+  display: inline;
+}
+
+.page-link {
+  margin-right: 16px;
+  font-size: 14px;
+}
+
+.page-link:last-of-type {
+  margin-right: 12px;
+}
+
+.site-footer {
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  font-size: 12px;
+}
+
+.footer-heading {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.footer-col-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.post-list li {
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  color: #888;
+  font-size: 12px;
+}
+
+.post-link {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.post-header {
+  margin-bottom: 20px;
+}
+
+.post-title {
+  font-size: 18px;
+  margin: 0 0 5px;
+  font-weight: 700;
+}
+
+.post-content {
+  font-size: 14px;
+}
+
+.post-content h1, .post-content h2, .post-content h3,
+.post-content h4, .post-content h5, .post-content h6 {
+  font-size: 16px;
+  margin: 24px 0 12px;
+  font-weight: 700;
+}
+
+.post-content p {
+  margin: 0 0 16px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-content iframe {
+  max-width: 100%;
+  border: none;
+}
+
+.post-content ul, .post-content ol {
+  padding-left: 24px;
+}
+
+.post-content blockquote {
+  margin: 0 0 16px;
+  padding-left: 16px;
+  border-left: 2px solid #333;
+  color: #888;
+}
+
+.post-content hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 24px 0;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 15px 0;
+  }
+
+  .site-title {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .page-link {
+    margin-right: 12px;
+  }
+
+  .footer-col {
+    min-width: 100%;
+  }
 }

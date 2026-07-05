@@ -30,19 +30,10 @@ twitter_username: jumbofume
 rss: rss
 facebook_username: arstroitski
 # Build settings
-theme: minima
-# remote-theme: pages-themes/minimal@v0.2.0
 plugins:
   - jekyll-feed
-#  - jekyll-remote-theme
-# Minima: show excerpts in the frontpage
-#
-# remote_theme: pages-themes/minima
 show_excerpts: false
-minima:
-  skin: dark
-  date_format: "%Y-%m-%d"
-# Minima: custom header links
+date_format: "%Y-%m-%d"
 header_pages:
   - _pages/frontpage.md
   - _pages/releases.md
