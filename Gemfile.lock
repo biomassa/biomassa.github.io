@@ -142,8 +142,6 @@ GEM
       rouge (>= 2.0, < 5.0)
     jekyll-default-layout (0.1.5)
       jekyll (>= 3.0, < 5.0)
-    jekyll-embeds (0.0.8)
-      jekyll
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.5.0)
@@ -316,7 +314,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages (>= 30)
   http_parser.rb (~> 0.6.0)
-  jekyll-embeds
   jekyll-feed (~> 0.12)
   minima (~> 2.5)
   ruby-lsp (~> 0.26.8)
