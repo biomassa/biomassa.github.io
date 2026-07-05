@@ -51,10 +51,15 @@ a:hover {
   display: inline;
 }
 
+.page-link,
+.site-title,
+.site-nav a {
+  text-decoration: none;
+}
+
 .page-link {
   margin-right: 16px;
   font-size: 14px;
-  text-decoration: none;
 }
 
 .page-link:last-of-type {
@@ -82,11 +87,7 @@ a:hover {
   gap: 4px;
 }
 
-.contact-list li + li::before {
-  content: " / ";
-  margin-right: 4px;
-  color: #888;
-}
+
 
 .social-media-list {
   list-style: none;

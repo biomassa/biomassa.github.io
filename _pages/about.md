@@ -9,4 +9,4 @@ layout: headlesspage
 amos troitski releases music as himself (in collaborations) or as *black dingus* (solo).   
 his instruments are modular synthesizers, field recorders, tape machines and software.
 
-amos was one half of the pandemic era transoceanic networked duo [manifestoon platoon](https://manifestoon.org/){:target="_blank"} (with brooklyn-based ethnomusicologist and musician [eliot bates](https://eliotbates.com){:target="_blank"}). 
+amos was one half of the pandemic era transoceanic networked duo manifestoon platoon (with brooklyn-based ethnomusicologist and musician [eliot bates](https://eliotbates.com){:target="_blank"}). 
