@@ -1,7 +1,6 @@
 ---
 layout: page
-title: "voidstreaming series"
-list-title: voidstreaming series
+title: "voidstreaming_series"
 permalink: /voidstreaming/
 ---
 
