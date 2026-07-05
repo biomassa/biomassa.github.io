@@ -120,20 +120,17 @@ a:hover {
 }
 
 .post-list li {
-  margin-bottom: 6px;
+  margin-bottom: 24px;
 }
 
 .post-list li h3 {
   margin: 0;
-  display: inline;
-  font-size: inherit;
-  font-weight: inherit;
 }
 
 .post-meta {
+  display: block;
   color: #888;
   font-size: 12px;
-  margin-right: 8px;
 }
 
 .post-link {
