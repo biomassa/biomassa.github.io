@@ -194,19 +194,78 @@ a:hover {
   margin: 24px 0;
 }
 
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+}
+
 @media (max-width: 600px) {
-  .site-header {
-    padding: 15px 0;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .site-title {
-    display: block;
     margin-right: 0;
-    margin-bottom: 10px;
+  }
+
+  .nav-toggle-label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px 0;
+  }
+
+  .nav-toggle-label span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #333;
+  }
+
+  .nav-toggle:checked ~ .site-nav {
+    display: block;
   }
 
   .page-link {
-    margin-right: 12px;
+    display: block;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .page-link:last-of-type {
+    margin-right: 0;
+  }
+
+  .site-nav .svg-icon {
+    margin-top: 4px;
   }
 
   .footer-col {
